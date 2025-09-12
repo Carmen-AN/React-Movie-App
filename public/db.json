@@ -1,0 +1,14 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "nume": "Oppenheimer",
+      "autor": "Christopher Nolan",
+      "rating": 9,
+      "categorie": "Movie",
+      "genre": "Action",
+      "imgUrl": "/Images/oppenheimer.jpg",
+      "about": "Lorem ipsum dolor sit amet..."
+    }
+  ]
+}

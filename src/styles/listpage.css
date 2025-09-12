@@ -1,0 +1,465 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+  }
+  
+ #root.list-page {
+  background: linear-gradient(to bottom, #5e0599, #d8d8d8);
+  color: #000; 
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+  
+/*----------------HEADER----------------*/
+#root.list-page .navbar {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    padding-top: 20px;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #root.list-page .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+  
+    width: 100%;
+  }
+  
+  #root.list-page .logo img {
+    height: 60px;
+  }
+  
+  #root.list-page .nav-links li, #root.list-page .dropdown{
+    list-style-type: none;
+    display: inline-block;
+  }
+  
+  #root.list-page .nav-links a {
+    text-decoration: none;
+    color: #EAEAEA;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-left: 15px;
+  }
+  
+  #root.list-page .nav-links a:hover{
+    color: #fbb44c;
+  }
+  
+  #root.list-page .dropdown-menu {
+    display: none;
+    height: 50px;
+    width: 100px;
+  }
+  
+  #root.list-page .dropdown-menu a {
+    display: block;
+    padding-top: 7px;
+  }
+  
+  #root.list-page .material-symbols-outlined {
+    position: relative;
+    top: 7px;
+  }
+  
+  #root.list-page .material-symbols-outlined:hover {
+    color: #fbb44c;
+  }
+  
+  #root.list-page .dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: #101d42;
+    position: absolute;
+    z-index: 1;
+    
+  }
+  
+  #root.list-page .menu-toggle .bar {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    border-radius: 1px;
+    z-index: 10;
+    margin: 5px;
+    display: none;
+  }
+
+  #root.list-page .hamburger-button {
+    display: none;
+  }
+
+
+
+
+#root.list-page .delete-button, #root.list-page .edit-button {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 84px;
+  height: 40px;
+  padding: 0 14px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+
+}
+
+#root.list-page .delete-button:before, #root.list-page .edit-button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-delete-button 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-delete-button {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+#root.list-page .delete-button:after, #root.list-page .edit-button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+/*------------NAVBAR--------*/
+
+
+#root.list-page .page-title {
+   text-align: center;
+  font-size: 56px;
+  margin: 20px 0 24px;
+  text-shadow: 0 2px 6px rgba(0,0,0,.35);
+}
+
+#root.list-page .filter-section .fancy-filter {
+  margin: 0 auto 60px;         
+  padding: 15px 25px;}
+#root.list-page .fancy-filter {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 30px auto;
+  width: fit-content;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+#root.list-page .fancy-filter input,
+#root.list-page .fancy-filter select {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  outline: none;
+  min-width: 160px;
+}
+
+#root.list-page .fancy-filter input::placeholder {
+  color: #ccc;
+}
+
+#root.list-page .fancy-filter input:focus, 
+#root.list-page .fancy-filter select:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 0 2px #8ab4f8;
+}
+
+#root.list-page .fancy-filter select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+
+
+
+#root.list-page .movie-card a {
+  text-decoration: none;
+  
+}
+
+
+
+
+#root.list-page footer {
+  background-color: #333;
+  color: #ddd;
+  padding-top: 40px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  width: 100%;
+}
+
+
+
+#root.list-page .footer-top h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+
+#root.list-page .footer-top p {
+  margin: 5px 0 20px 0;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+
+#root.list-page .footer-nav a,
+#root.list-page .footer-subnav a {
+  color: #bbb;
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+#root.list-page .footer-nav a:hover,
+#root.list-page .footer-subnav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#root.list-page .footer-bottom {
+  border-top: 1px solid #555;
+  padding-top: 15px;
+  font-size: 11px;
+  color: #999;
+  margin-top: 25px;
+}
+
+
+#root.list-page .list {
+  padding-top: 100px;
+}
+
+
+
+/* === GALERIA DE CARDURI === */
+#root.list-page .movie-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+}
+
+
+/* === CARD INDIVIDUAL === */
+
+#root.list-page .movie-card {
+   background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform .3s ease, box-shadow .3s ease;
+  position: relative;
+}
+
+
+#root.list-page .movie-card:hover {
+   transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.4);
+}
+
+
+
+/* Imaginea din card cu raport 2:3 */
+#root.list-page .movie-card img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  display: block;
+}
+
+/* Conținut text */
+#root.list-page .movie-body { padding: 12px; text-align: left; }
+#root.list-page .movie-body h3 { 
+  margin: 0 0 6px; 
+  font-size: 25px;
+  line-height: 1.2;
+  color: yellow;
+  
+}
+  
+  
+#root.list-page .muted {
+   opacity: .7; 
+   font-size: 20px; 
+  line-height: 1.2;
+    color: yellow;
+
+
+  }
+
+  #root.list-page .badge {
+   opacity: .7; 
+   font-size: 15px; 
+  line-height: 1.2;
+    color: yellow;
+
+
+  }
+
+
+
+#root.list-page .row-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px 12px;
+}
+
+
+/* Media queries pentru responsive */
+@media (max-width: 1200px) {
+  #root.list-page .movie-gallery { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  #root.list-page .movie-gallery { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  #root.list-page .movie-gallery { grid-template-columns: 1fr; }
+}
+
+
+/* === bloc NOU pentru fix butoane === */
+#root.list-page .movie-card::before,
+#root.list-page .movie-card::after {
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root.list-page .movie-card .movie-body,
+#root.list-page .movie-card .row-actions,
+#root.list-page .movie-card a,
+#root.list-page .movie-card button {
+  position: relative;
+  z-index: 2;
+}
+
+#root.list-page .movie-card > a:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+#root.list-page .edit-button {
+  /* stilul pentru butonul Edit */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 8px;
+  background: #7a48d3;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+#root.list-page .edit-button:hover {
+  transform: translateY(-1px);
+}
+
+#root.list-page .delete-button {
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 8px;
+  background: #3a3a3a;
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,.12);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+#root.list-page .delete-button:hover {
+  background: #4a4a4a;
+  transform: translateY(-1px);
+}
+
+#root.list-page .movie-card .row-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+

@@ -1,0 +1,354 @@
+* .navbar {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    padding-top: 20px;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+  
+    width: 100%;
+  }
+  
+  .logo img {
+    height: 60px;
+  }
+  
+  .nav-links li , .dropdown{
+    list-style-type: none;
+    display: inline-block;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #EAEAEA;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-left: 15px;
+  }
+  
+  .nav-links a:hover{
+    color: #fbb44c;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    height: 50px;
+    width: 100px;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding-top: 7px;
+  }
+  
+  .material-symbols-outlined {
+    position: relative;
+    top: 7px;
+  }
+  
+  .material-symbols-outlined:hover {
+    color: #fbb44c;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: #101d42;
+    position: absolute;
+    z-index: 1;
+    
+  }
+  
+  .menu-toggle .bar {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    border-radius: 1px;
+    z-index: 10;
+    margin: 5px;
+    display: none;
+  }
+
+  .hamburger-button {
+    display: none;
+  }
+
+/*----------MAIN---------*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: white;
+  background-color: #000;
+}
+
+.hero {
+  position: relative;
+  /* background-image: url('Images/brutalist2.jpg'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.left {
+  flex: 1;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.details {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #cccccc;
+}
+
+.btn {
+  background-color: #9b59b6;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.right {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.cast, .rating {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.cast span {
+  color: white;
+  font-weight: bold;
+}
+
+
+.details-section {
+  background: linear-gradient(to bottom, #9e3cdf, #39379b);
+  color: #fff;
+  padding: 40px 10%;
+  font-family: 'Arial', sans-serif;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #000000;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.presentation {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 40px;
+}
+
+.label {
+  font-weight: bold;
+  color: #eee2e2;
+}
+
+/*-----------FOOTER----------*/
+footer {
+  background-color: #333;
+  color: #ddd;
+  padding-top: 40px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  width: 100%;
+}
+
+
+
+.footer-top h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.footer-top p {
+  margin: 5px 0 20px 0;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+
+.footer-nav a,
+.footer-subnav a {
+  color: #bbb;
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.footer-nav a:hover,
+.footer-subnav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #555;
+  padding-top: 15px;
+  font-size: 11px;
+  color: #999;
+  margin-top: 25px;
+}
+
+.director {
+  font-size: 20px;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.rating {
+  font-size: 20px;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 20px;
+  margin: 10px;
+  font-weight: bold;
+}
+
+
+.details-page {
+  min-height: 100vh;
+  display: flex;                 /* centrează pe orizontală şi verticală */
+  align-items: center;
+  justify-content: center;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 140px 24px 80px;
+}
+
+.details-page::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.4);
+  pointer-events: none;
+}
+
+.details-wrap {
+  position: relative;   /* deasupra overlay */
+  max-width: 700px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;   /* text centrat */
+  color: #fff;
+}
+
+.details-wrap h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.details-wrap p {
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+/* butoanele sub text */
+.details-wrap .row-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* stiluri de bază pentru butoane */
+.details-wrap .btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: #a020f0;  /* mov */
+  transition: background .3s;
+}
+.details-wrap .btn:hover {
+  background-color: #b94cff;
+}
+
+.details-wrap .delete-button {
+  background-color: #d9534f;
+}
+.details-wrap .delete-button:hover {
+  background-color: #ff5b57;
+}

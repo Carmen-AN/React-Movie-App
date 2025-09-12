@@ -1,0 +1,64 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "nume": "Oppenheimer",
+      "autor": "Christopher Nolan",
+      "rating": 9,
+      "categorie": "Movie",
+      "genre": "Action",
+      "imgUrl": "https://i.pinimg.com/1200x/d3/99/1a/d3991aa8b5708a0fe948ff25a4772509.jpg",
+      "about": "Un thriller despre crearea bombei atomice."
+    },
+    {
+      "id": 2,
+      "nume": "Inception",
+      "autor": "Christopher Nolan",
+      "rating": 9,
+      "categorie": "Movie",
+      "genre": "Sci-Fi",
+      "imgUrl": "https://i.pinimg.com/736x/75/79/69/7579694bfb4559545408866a7505c451.jpg",
+      "about": "Un hoț intră în vise pentru a fura sau a planta idei."
+    },
+    {
+      "id": 3,
+      "nume": "The Matrix",
+      "autor": "Lana & Lilly Wachowski",
+      "rating": 10,
+      "categorie": "Movie",
+      "genre": "Sci-Fi",
+      "imgUrl": "https://i.pinimg.com/736x/01/fd/98/01fd9847e3bf83bc01f7f59ff2ee50ca.jpg",
+      "about": "Neo descoperă adevărata natură a realității."
+    },
+    {
+      "id": 4,
+      "nume": "Interstellar",
+      "autor": "Christopher Nolan",
+      "rating": 9,
+      "categorie": "Movie",
+      "genre": "Adventure",
+      "imgUrl": "https://i.pinimg.com/1200x/f0/0e/f4/f00ef4ef28062a3ffe32c80cfa039c86.jpg",
+      "about": "O echipă de exploratori călătorește printr-o gaură de vierme."
+    },
+    {
+      "id": 5,
+      "nume": "The Godfather",
+      "autor": "Francis Ford Coppola",
+      "rating": 10,
+      "categorie": "Movie",
+      "genre": "Drama",
+      "imgUrl": "https://i.pinimg.com/736x/35/e2/40/35e24099585acd8a6c53d82586fda83e.jpg",
+      "about": "Povestea familiei mafiote Corleone."
+    },
+    {
+      "id": 6,
+      "nume": "Pulp Fiction",
+      "autor": "Quentin Tarantino",
+      "rating": 9,
+      "categorie": "Movie",
+      "genre": "Crime",
+      "imgUrl": "https://i.pinimg.com/1200x/89/41/e7/8941e71464be8fe81ade92a86817338e.jpg",
+      "about": "O serie de povești interconectate despre crimă și răscumpărare."
+    }
+  ]
+}
